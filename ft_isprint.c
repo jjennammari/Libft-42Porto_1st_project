@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 22:07:27 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/10/29 22:11:03 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:03:18 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (16384);
+		return (1);
 	else
 		return (0);
 }

@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 20:32:55 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/08 15:07:38 by jemustaj         ###   ########.fr       */
+/*   Created: 2024/11/07 22:18:22 by jemustaj          #+#    #+#             */
+/*   Updated: 2024/11/08 15:30:04 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
+	write(fd, &c, 1);
 }
