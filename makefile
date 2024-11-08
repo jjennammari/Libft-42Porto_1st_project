@@ -6,7 +6,7 @@
 #    By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 16:02:58 by jemustaj          #+#    #+#              #
-#    Updated: 2024/11/08 17:53:13 by jemustaj         ###   ########.fr        #
+#    Updated: 2024/11/08 19:11:39 by jemustaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,5 +47,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-

@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/08 18:46:08 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:24:45 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,10 @@ int	main(void)
 	printf("String size 9: %zu\n", ft_strlen("aproveita"));
 	printf("String size 0: %zu\n", ft_strlen(""));
 	write(1, "\n", 1);
+	write(1, "FT_STRLCPY\n", 11);
 	char	dest[] = "Hell";
 	char	src[] = "Well";
 	size_t	size = 1;
 	printf("Size of src: %zu\n", ft_strlcpy(dest, src, size));
-	printf("Size of src: %zu\n", ft_strlcpy(dest, src, 2));
-	printf("Size of src: %d\n", strlcpy(dest, src, size));
-	printf("Size of src: %d\n", strlcpy(dest, src, 2));
 	return (0);
 }

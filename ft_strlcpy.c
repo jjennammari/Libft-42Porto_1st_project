@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:39:28 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/08 17:57:47 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:11:07 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	len;
+	size_t	src_len;
 
+	src_len = ft_strlen(src);
+	if (!size)
+		return (src_len);
 	i = 0;
-	len = ft_strlen(src);
-	while (src[i] && i < size)
+	while (src[i] && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (len);
+	return (src_len);
 }

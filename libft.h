@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:17:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/08 17:18:51 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:18:20 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <ctype.h> //isalpha, isdigit, isalnum, isascii, isprint
-#include <string.h> // strlen
+#include <bsd/string.h> // strlen
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
