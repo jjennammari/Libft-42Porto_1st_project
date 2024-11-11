@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 19:30:53 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/11 17:39:41 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:05:24 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[dst_len] = '\0';
-	return (dst_len);
+	return (dst_len + src_len - 2);
 }

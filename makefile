@@ -6,7 +6,7 @@
 #    By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 16:02:58 by jemustaj          #+#    #+#              #
-#    Updated: 2024/11/11 17:39:31 by jemustaj         ###   ########.fr        #
+#    Updated: 2024/11/11 17:56:21 by jemustaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 EXEC = a.out
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -lbsd
 
 AR = ar -rcs
 RM = rm -rf

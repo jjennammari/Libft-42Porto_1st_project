@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/11 17:39:17 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:48:27 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int	main(void)
 	write(1, "\nFT_STRLCAT\n", 12);
 	char	dest1[5] = "Hello";
 	char src1[] = "Jude";
-	size_t size1 = 4;
+	size_t size1 = 8;
 	printf("Size of dst = src: %zu\n", ft_strlcat(dest1, src1, size1));
+	printf("Size of dst = src: %zu\n", strlcat(dest1, src1, size1));
 	return (0);
 }
