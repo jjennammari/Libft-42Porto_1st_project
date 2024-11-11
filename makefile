@@ -6,7 +6,7 @@
 #    By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 16:02:58 by jemustaj          #+#    #+#              #
-#    Updated: 2024/11/08 19:11:39 by jemustaj         ###   ########.fr        #
+#    Updated: 2024/11/11 17:39:31 by jemustaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ AR = ar -rcs
 RM = rm -rf
 
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-       ft_strlen.c ft_strlcpy.c
+       ft_strlen.c ft_strlcpy.c ft_strlcat.c
 OBJS = $(SRC:.c=.o)
 
 TEST_SRC = main.c

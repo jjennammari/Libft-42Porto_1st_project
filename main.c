@@ -6,12 +6,11 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/08 19:24:45 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:39:17 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 int	main(void)
 {
@@ -39,5 +38,10 @@ int	main(void)
 	char	src[] = "Well";
 	size_t	size = 1;
 	printf("Size of src: %zu\n", ft_strlcpy(dest, src, size));
+	write(1, "\nFT_STRLCAT\n", 12);
+	char	dest1[5] = "Hello";
+	char src1[] = "Jude";
+	size_t size1 = 4;
+	printf("Size of dst = src: %zu\n", ft_strlcat(dest1, src1, size1));
 	return (0);
 }
