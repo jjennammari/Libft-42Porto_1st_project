@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/11 17:48:27 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:13:03 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,10 @@ int	main(void)
 	char src1[] = "Jude";
 	size_t size1 = 8;
 	printf("Size of dst = src: %zu\n", ft_strlcat(dest1, src1, size1));
-	printf("Size of dst = src: %zu\n", strlcat(dest1, src1, size1));
+	write(1, "\nFT_STRCHR\n", 11);
+	const char	s[] = "Hey Jude";
+	int	c = 121;
+	printf("%s\n", ft_strchr(s, c));
+	printf("%s\n", strchr(s, c));
 	return (0);
 }
