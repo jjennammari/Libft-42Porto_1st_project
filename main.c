@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/13 16:47:36 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:01:54 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,10 @@ int	main(void)
 	const char	s3[] = "In My Garden";
 	size_t	n = 5;
 	printf("%d\n", ft_strncmp(s2, s3, n));
+	write(1, "\nFT_STRNSTR\n", 12);
+	const char	s4[] = "There is a big tree in my garden";
+	const char	s5[] = "is a big";
+	size_t	len = 18;
+	printf("%s\n", ft_strnstr(s4, s5, len));
 	return (0);
 }
