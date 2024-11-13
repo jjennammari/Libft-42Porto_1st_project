@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/12 22:37:34 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/13 16:47:36 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,10 @@ int	main(void)
 	const char	s1[] = "Banana";
 	int	c1 = 110;
 	printf("%s\n", ft_strrchr(s1, c1));
-	printf("%s\n", strrchr(s1, c1));
+	write(1, "\nFT_STRNCMP\n", 12);
+	const char	s2[] = "Big Tree";
+	const char	s3[] = "In My Garden";
+	size_t	n = 5;
+	printf("%d\n", ft_strncmp(s2, s3, n));
 	return (0);
 }
