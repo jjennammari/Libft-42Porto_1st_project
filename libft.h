@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:17:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/12 19:11:17 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/12 20:00:47 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <ctype.h> //isalpha, isdigit, isalnum, isascii, isprint
-#include <string.h> // strlen
+#include <string.h> // strlen, strchr, strrchr
 #include <bsd/string.h> // strlcpy, strlcat
 
 int	ft_isalpha(int c);
@@ -28,5 +28,6 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/12 19:13:03 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:37:34 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ int	main(void)
 	const char	s[] = "Hey Jude";
 	int	c = 121;
 	printf("%s\n", ft_strchr(s, c));
-	printf("%s\n", strchr(s, c));
+	write(1, "\nFT_STRRCHR\n", 12);
+	const char	s1[] = "Banana";
+	int	c1 = 110;
+	printf("%s\n", ft_strrchr(s1, c1));
+	printf("%s\n", strrchr(s1, c1));
 	return (0);
 }
