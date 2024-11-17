@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/17 20:15:43 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:23:44 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,15 @@ int	main(void)
 	const char	src2[] = "Aproveita";
 
 	printf("Copy all: %s\n", (unsigned char *)ft_memcpy(dest2, src2, 9));
-	printf("Copy all: %s\n", (unsigned char *)ft_memcpy(dest2, NULL, 9));
-	printf("Copy all: %s\n", (unsigned char *)ft_memcpy(NULL, src2, 9));
+	printf("NULL src: %s\n", (unsigned char *)ft_memcpy(dest2, NULL, 9));
+	printf("NULL dest: %s\n", (unsigned char *)ft_memcpy(NULL, src2, 9));
+	
+	write (1, "\nFT_MEMMOVE\n", 12);
+	char	dest3[10];
+	const char	src3[] = "Enjoy";
+	
+	printf("Copy all: %s\n", (unsigned char *)ft_memmove(dest3, src3, 6));
+	printf("NULL src: %s\n", (unsigned char *)ft_memmove(dest3, NULL, 6));
+	printf("NULL dest: %s\n", (unsigned char *)ft_memmove(NULL, src3, 6));
 	return (0);
 }
