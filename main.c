@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/13 20:01:54 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/17 20:15:43 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,33 +33,49 @@ int	main(void)
 	printf("String size 9: %zu\n", ft_strlen("aproveita"));
 	printf("String size 0: %zu\n", ft_strlen(""));
 	write(1, "\n", 1);
+
 	write(1, "FT_STRLCPY\n", 11);
 	char	dest[] = "Hell";
 	char	src[] = "Well";
 	size_t	size = 1;
+
 	printf("Size of src: %zu\n", ft_strlcpy(dest, src, size));
+
 	write(1, "\nFT_STRLCAT\n", 12);
 	char	dest1[5] = "Hello";
 	char src1[] = "Jude";
 	size_t size1 = 8;
+
 	printf("Size of dst = src: %zu\n", ft_strlcat(dest1, src1, size1));
+
 	write(1, "\nFT_STRCHR\n", 11);
 	const char	s[] = "Hey Jude";
 	int	c = 121;
 	printf("%s\n", ft_strchr(s, c));
+
 	write(1, "\nFT_STRRCHR\n", 12);
 	const char	s1[] = "Banana";
 	int	c1 = 110;
 	printf("%s\n", ft_strrchr(s1, c1));
+
 	write(1, "\nFT_STRNCMP\n", 12);
 	const char	s2[] = "Big Tree";
 	const char	s3[] = "In My Garden";
 	size_t	n = 5;
 	printf("%d\n", ft_strncmp(s2, s3, n));
+
 	write(1, "\nFT_STRNSTR\n", 12);
 	const char	s4[] = "There is a big tree in my garden";
 	const char	s5[] = "is a big";
 	size_t	len = 18;
 	printf("%s\n", ft_strnstr(s4, s5, len));
+
+	write (1, "\nFT_MEMCPY\n", 11);
+	char	dest2[10];
+	const char	src2[] = "Aproveita";
+
+	printf("Copy all: %s\n", (unsigned char *)ft_memcpy(dest2, src2, 9));
+	printf("Copy all: %s\n", (unsigned char *)ft_memcpy(dest2, NULL, 9));
+	printf("Copy all: %s\n", (unsigned char *)ft_memcpy(NULL, src2, 9));
 	return (0);
 }
