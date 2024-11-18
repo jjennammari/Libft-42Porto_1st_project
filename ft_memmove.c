@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 20:55:39 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/17 22:29:50 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/18 19:36:12 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,37 +25,26 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = dest;
 	s = src;
 	if (src > dest)
-	{
-		i = 0;
-		while ((size_t)i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+		ft_memcpy(d, s, n);
 	else
-	{
-		i = n;
-		while (i > 0)
+		while (n > 0)
 		{
-			d[i - 1] = s[i - 1];
-			i--;
+			d[n - 1] = s[n - 1];
+			n--;
 		}
-	}
 	return (dest);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
 	char	dest[7] = "123456";
-	//char	*pointer_dest = dest;
 	char	*src = "abcdefg";
-	//char	*pointer_src = src;
+	char	test_d[7] = "123456";
+	char	*test_s = "abcdefg";
 
-	char	test[7] = "123456";
 	printf("%s\n", (char *)ft_memmove(dest, src, 6));
-	printf("%s\n", (char *)ft_memmove(test + 2, test, 2));
+	printf("%s\n", (char *)ft_memmove(test_d + 2, test_s, 5));
 	return (0);
-}*/
+}
