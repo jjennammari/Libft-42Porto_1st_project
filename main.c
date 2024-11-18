@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/18 22:39:58 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/18 23:15:10 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,15 @@ int	main(void)
 	char	str1[] = "Nukkumaan";
 
 	ft_bzero(str, 1);
-	printf("%zu\n", str);
+	printf("%s\n", str);
 	bzero(str1, 1);
-	printf("%zu\n", str1);
+	printf("%s\n", str1);
+
+	write (1, "\nFT_MEMCHR\n", 11);
+	char	t[] = "Enjoy";
+	int	b = 'j';
+
+	printf("%s\n", (unsigned char *)ft_memchr(t, b, 4));
+	printf("%s\n", (unsigned char *)memchr(t, b, 4));
 	return (0);
 }
