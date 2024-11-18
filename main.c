@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/17 21:23:44 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/18 22:08:26 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,19 @@ int	main(void)
 	printf("NULL dest: %s\n", (unsigned char *)ft_memcpy(NULL, src2, 9));
 	
 	write (1, "\nFT_MEMMOVE\n", 12);
-	char	dest3[10];
-	const char	src3[] = "Enjoy";
+	char	dest3[7] = "123456";
+	char	src3[] = "abcdefg";
+	char	test_d[] = "123456";
+	char	test_s[] = "abcdefg";
 	
-	printf("Copy all: %s\n", (unsigned char *)ft_memmove(dest3, src3, 6));
-	printf("NULL src: %s\n", (unsigned char *)ft_memmove(dest3, NULL, 6));
-	printf("NULL dest: %s\n", (unsigned char *)ft_memmove(NULL, src3, 6));
+	printf("%s\n", (unsigned char *)ft_memmove(dest3, src3, 3));
+	printf("%s\n", (unsigned char *)ft_memmove(test_d + 2, test_s, 5));
+
+	write (1, "\nFT_MEMSET\n", 11);
+	char	arr[6] = "12345";
+	int	m = 3;
+
+	printf("%s\n", (unsigned char *)ft_memset(arr, m, 9));
+	printf("%s\n", (unsigned char *)memset(arr, m, 9));
 	return (0);
 }
