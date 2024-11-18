@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/18 22:08:26 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/18 22:39:58 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,16 @@ int	main(void)
 	char	arr[6] = "12345";
 	int	m = 3;
 
-	printf("%s\n", (unsigned char *)ft_memset(arr, m, 9));
-	printf("%s\n", (unsigned char *)memset(arr, m, 9));
+	printf("%s\n", (unsigned char *)ft_memset(arr, m, 3));
+	printf("%s\n", (unsigned char *)memset(arr, m, 3));
+
+	write (1, "\nFT_BZERO\n", 10);
+	char	str[] = "Nukkumaan";
+	char	str1[] = "Nukkumaan";
+
+	ft_bzero(str, 1);
+	printf("%zu\n", str);
+	bzero(str1, 1);
+	printf("%zu\n", str1);
 	return (0);
 }
