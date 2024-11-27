@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/18 23:15:10 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/27 23:17:28 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,15 @@ int	main(void)
 	printf("String size 0: %zu\n", ft_strlen(""));
 	write(1, "\n", 1);
 
-	write(1, "FT_STRLCPY\n", 11);
+	write(1, "\nFT_TOUPPER\n", 12);
+	int	i = 'j';
+	printf("%d\n", ft_toupper(i));
+
+	write(1, "\nFT_TOLOWER\n", 12);
+	int	j = 'J';
+	printf("%d\n", ft_tolower(j));
+
+	write(1, "\nFT_STRLCPY\n", 12);
 	char	dest[] = "Hell";
 	char	src[] = "Well";
 	size_t	size = 1;
@@ -109,5 +117,13 @@ int	main(void)
 
 	printf("%s\n", (unsigned char *)ft_memchr(t, b, 4));
 	printf("%s\n", (unsigned char *)memchr(t, b, 4));
+
+	write (1, "\nFT_MEMCMP\n", 11);
+	unsigned char	s6[] = "abcdef";
+	unsigned char	s7[] = "acdefg";
+	size_t	nb = 3;
+
+	printf("%d\n", ft_memcmp(s6, s7, nb));
+	printf("%d\n", memcmp(s6, s7, nb));
 	return (0);
 }
