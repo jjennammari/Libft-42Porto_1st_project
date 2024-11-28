@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/28 13:24:26 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:13:51 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,6 +129,12 @@ int	main(void)
 	char	*at = "--12";
 
 	printf("%d\n", ft_atoi(at));
-	printf("%d\n", atoi(at));
+
+	write (1, "\nFT_CALLOC\n", 11);
+	void	*ptr = "Enjoy";
+
+	ptr = ft_calloc(5, sizeof(void));
+	printf("%p\n", &ptr);
+	free (ptr);
 	return (0);
 }
