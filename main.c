@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/28 17:13:51 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:52:44 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,14 @@ int	main(void)
 	void	*ptr = "Enjoy";
 
 	ptr = ft_calloc(5, sizeof(void));
-	printf("%p\n", &ptr);
+	printf("%p\n", ptr);
 	free (ptr);
+
+	write (1, "\nFT_PUTCHAR_FD\n", 15);
+	char	cp = 'a';
+	int	fd = 1;
+
+	ft_putchar_fd(cp, fd);
+	write (1, "\n", 1);
 	return (0);
 }
