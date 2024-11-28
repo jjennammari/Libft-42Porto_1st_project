@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:17:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/27 23:07:14 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/27 23:40:07 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <ctype.h> //isalpha, isdigit, isalnum, isascii, isprint
 #include <string.h> // strlen, strchr, strrchr, strncmp
 #include <bsd/string.h> // strlcpy, strlcat
+#include <stdlib.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -39,5 +40,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
+int	ft_atoi(const char *nptr);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/27 23:17:28 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/28 13:24:26 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,11 @@ int	main(void)
 	size_t	nb = 3;
 
 	printf("%d\n", ft_memcmp(s6, s7, nb));
-	printf("%d\n", memcmp(s6, s7, nb));
+
+	write (1, "\nFT_ATOI\n", 9);
+	char	*at = "--12";
+
+	printf("%d\n", ft_atoi(at));
+	printf("%d\n", atoi(at));
 	return (0);
 }
