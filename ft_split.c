@@ -6,13 +6,13 @@
 /*   By: jemustaj <jemustaj@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 19:45:00 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/29 22:43:26 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/29 23:33:25 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_splits(char const *s, char c)
+static int	count_splits(char const *s, char c)
 {
 	int	output;
 
@@ -26,7 +26,7 @@ int	count_splits(char const *s, char c)
 	return (output + 1);
 }
 
-char	*strldup(char const *s, size_t len)
+static char	*strldup(char const *s, size_t len)
 {
 	char	*dup;
 
@@ -37,7 +37,7 @@ char	*strldup(char const *s, size_t len)
 	return (dup);
 }
 
-int	split_strings(char const *s, char c, char **str_array, int splits_am)
+static int	split_strings(char const *s, char c, char **str_array, int splits_am)
 {
 	int	i;
 	int	splits_i;
@@ -61,7 +61,7 @@ int	split_strings(char const *s, char c, char **str_array, int splits_am)
 	return (1);
 }
 
-void	free_str_array(char **str_array)
+static void	free_str_array(char **str_array)
 {
 	int	i;
 
@@ -92,21 +92,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str_array);
 }
-/*
-int	main(int argc, char **argv)
-{
-	char	**splitted = ft_split(argv[1], '.');
-	int	i;
-
-	(void)argc;
-	i = 0;
-	if (!splitted)
-		return (0);
-	while (splitted[i])
-	{
-		printf("String %d: %s\n", i, splitted[i]);
-		i++;
-	}
-	free_str_array(splitted);
-	return (0);
-}*/

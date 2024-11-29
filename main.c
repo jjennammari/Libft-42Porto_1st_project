@@ -6,11 +6,24 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/28 17:52:44 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/29 23:32:41 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void free_str_array(char **str_array)
+{
+    int i;
+
+    i = 0;
+    while (str_array[i] != NULL)
+    {
+        free(str_array[i]);
+        i++;
+    }
+    free(str_array);
+}
 
 int	main(void)
 {
@@ -143,5 +156,26 @@ int	main(void)
 
 	ft_putchar_fd(cp, fd);
 	write (1, "\n", 1);
+
+	write (1, "\nFT_SPLIT\n", 10);
+	char	**splitted = ft_split("abc.defg.hi", '.');
+	int	g;
+
+	g = 0;
+	if (!splitted)
+		return (0);
+	while (splitted[g])
+	{
+		printf("String %d: %s\n", g, splitted[g]);
+		g++;
+	}
+	free_str_array(splitted);
+
+	write (1, "\nFT_SUBSTR\n", 11);
+	char const	*s8 = "abcd";
+	unsigned int	start = 2;
+	size_t	len4 = 4;
+
+	printf("%s\n", ft_substr(s8, start, len4));
 	return (0);
 }
