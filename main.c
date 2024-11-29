@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/29 23:32:41 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/29 23:55:50 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,8 +154,21 @@ int	main(void)
 	char	cp = 'a';
 	int	fd = 1;
 
-	ft_putchar_fd(cp, fd);
-	write (1, "\n", 1);
+        ft_putchar_fd(cp, fd);
+        write (1, "\n", 1);
+
+	write (1, "\nFT_PUTSTR_FD\n", 14);
+        char    *cp1 = "abcd";
+        int     fd1 = 1;
+
+        ft_putstr_fd(cp1, fd1);
+        write (1, "\n", 1);
+
+	write (1, "\nFT_PUTENDL_FD\n", 15);
+        char    *cp3 = "a";
+        int     fd3 = 1;
+
+        ft_putendl_fd(cp3, fd3);
 
 	write (1, "\nFT_SPLIT\n", 10);
 	char	**splitted = ft_split("abc.defg.hi", '.');

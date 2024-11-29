@@ -6,7 +6,7 @@
 #    By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 16:02:58 by jemustaj          #+#    #+#              #
-#    Updated: 2024/11/29 22:26:08 by jemustaj         ###   ########.fr        #
+#    Updated: 2024/11/29 23:54:47 by jemustaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
        ft_strncmp.c ft_strnstr.c ft_memcpy.c ft_memmove.c ft_memset.c \
        ft_bzero.c ft_memchr.c ft_toupper.c ft_tolower.c ft_memcmp.c \
        ft_atoi.c ft_calloc.c ft_strdup.c \
-       ft_putchar_fd.c ft_putstr_fd.c \
+       ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
        ft_substr.c ft_split.c
 OBJS = $(SRC:.c=.o)
 
