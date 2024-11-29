@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 19:45:00 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/29 21:59:37 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/11/29 22:43:26 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	count_splits(char const *s, char c)
 char	*strldup(char const *s, size_t len)
 {
 	char	*dup;
-	
+
 	dup = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!dup)
 		return (NULL);
@@ -52,7 +52,7 @@ int	split_strings(char const *s, char c, char **str_array, int splits_am)
 			if (!str_array[splits_i])
 				return (0);
 			splits_i++;
-			s += i+1;
+			s += i + 1;
 			i = 0;
 		}
 		else
@@ -76,11 +76,11 @@ void	free_str_array(char **str_array)
 
 char	**ft_split(char const *s, char c)
 {
-	int	splits_am;
+	int		splits_am;
 	char	**str_array;
 
 	if (!s)
-		return (NULL);	
+		return (NULL);
 	splits_am = count_splits(s, c);
 	str_array = (char **)ft_calloc(splits_am + 1, sizeof(char *));
 	if (!str_array)
@@ -92,7 +92,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str_array);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	char	**splitted = ft_split(argv[1], '.');
@@ -109,4 +109,4 @@ int	main(int argc, char **argv)
 	}
 	free_str_array(splitted);
 	return (0);
-}
+}*/
