@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 16:02:58 by jemustaj          #+#    #+#              #
-#    Updated: 2024/11/30 00:04:57 by jemustaj         ###   ########.fr        #
+#    Updated: 2024/12/01 18:37:57 by jemustaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
        ft_bzero.c ft_memchr.c ft_toupper.c ft_tolower.c ft_memcmp.c \
        ft_atoi.c ft_calloc.c ft_strdup.c \
        ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-       ft_substr.c ft_split.c
+       ft_substr.c ft_split.c ft_strjoin.c ft_strtrim.c ft_itoa.c \
+       ft_strmapi.c ft_striteri.c
 OBJS = $(SRC:.c=.o)
 
 TEST_SRC = main.c

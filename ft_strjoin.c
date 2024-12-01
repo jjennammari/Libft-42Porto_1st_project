@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 18:30:28 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/12/01 19:38:07 by jemustaj         ###   ########.fr       */
+/*   Created: 2024/12/01 17:07:00 by jemustaj          #+#    #+#             */
+/*   Updated: 2024/12/01 17:12:53 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
+	char	*res;
+	int		i;
+	int		j;
 
-	if (!dest && !src)
+	res = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	if (!res)
 		return (NULL);
-	if (dest == src || n == 0)
-		return (dest);
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
 	i = 0;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	dest = (void *)d;
-	return (dest);
+	j = 0;
+	while (s1[i])
+		res[j++] = s1[i++];
+	i = 0;
+	while (s2[i])
+		res[j++] = s2[i++];
+	res[j] = '\0';
+	return (res);
 }
