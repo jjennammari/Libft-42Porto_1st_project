@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 19:45:00 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/29 23:44:53 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:15:19 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ static char	*strldup(char const *s, size_t len)
 	return (dup);
 }
 
-static int	split_strings(char const *s, char c, char **str_array, int splits_am)
+static int	split_strings(char const *s, char c, \
+		char **str_array, int splits_am)
 {
 	int	i;
 	int	splits_i;

@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:20:45 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/29 23:55:50 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:06:46 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,6 +169,20 @@ int	main(void)
         int     fd3 = 1;
 
         ft_putendl_fd(cp3, fd3);
+
+	write (1, "\nFT_PUTNBR\n", 11);
+	ft_putnbr_fd(-42, 1);
+	write (1, "\n", 1);
+	ft_putnbr_fd(0, 1);
+	write (1, "\n", 1);
+	ft_putnbr_fd(42, 1);
+	write (1, "\n", 1);
+	ft_putnbr_fd(100, 1);
+	write (1, "\n", 1);
+	ft_putnbr_fd(2147483647, 1);
+	write (1, "\n", 1);
+	ft_putnbr_fd(-2147483648, 1);
+	write (1, "\n", 1);
 
 	write (1, "\nFT_SPLIT\n", 10);
 	char	**splitted = ft_split("abc.defg.hi", '.');
