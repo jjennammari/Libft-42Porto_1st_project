@@ -17,15 +17,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*res;
 
+	if (!s)
+		return (NULL);
 	res = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
-	while (i < ft_strlen(s))
+	while (s[i])
 	{
 		res[i] = (*f)(i, s[i]);
 		i++;
 	}
-	res = NULL;
+	res[i] = '\0';
 	return (res);
 }

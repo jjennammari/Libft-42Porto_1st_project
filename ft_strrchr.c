@@ -6,7 +6,7 @@
 /*   By: jemustaj <jemustaj@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:57:19 by jemustaj          #+#    #+#             */
-/*   Updated: 2024/11/13 14:04:35 by jemustaj         ###   ########.fr       */
+/*   Updated: 2024/12/01 20:43:42 by jemustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,17 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char			chr;
-	unsigned int	i;
 	char			*res;
 
 	chr = (char)c;
-	i = 0;
 	res = NULL;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == chr)
-			res = ((char *)&s[i]);
-		i++;
+		if (*s == chr)
+			res = ((char *)s);
+		s++;
 	}
-	if (s[i] == c)
-		res = (char *)&s[i];
+	if (chr == '\0')
+		res = (char *)s;
 	return (res);
 }

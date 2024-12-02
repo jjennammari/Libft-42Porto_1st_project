@@ -12,18 +12,15 @@
 
 #include "libft.h"
 
-static int	ft_len(long nbl)
+static long int	ft_len(long nbl)
 {
 	int	count;
 
 	count = 0;
-	if (nbl < 0)
+	if (nbl <= 0)
 	{
-		nbl += -nbl;
 		count++;
 	}
-	if (nbl == 0)
-		count++;
 	while (nbl != 0)
 	{
 		nbl /= 10;
@@ -54,12 +51,14 @@ char	*ft_itoa(int n)
 	result = calloc_mem(len);
 	if (!result)
 		return (NULL);
+	if (n == 0)
+		result[0] = '0';
 	if (nbl < 0)
-		nbl += -nbl;
-	i = len -1;
+		nbl *= -1;
+	i = len - 1;
 	while (nbl != 0)
 	{
-		result [i] = ((nbl % 10) + '0');
+		result[i] = ((nbl % 10) + '0');
 		nbl /= 10;
 		i--;
 	}

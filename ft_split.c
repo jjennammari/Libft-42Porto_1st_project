@@ -12,84 +12,79 @@
 
 #include "libft.h"
 
-static int	count_splits(char const *s, char c)
-{
-	int	output;
-
-	output = 0;
-	while (*s != '\0')
-	{
-		if (*s == c)
-			output++;
-		s++;
-	}
-	return (output + 1);
-}
-
-static char	*strldup(char const *s, size_t len)
-{
-	char	*dup;
-
-	dup = (char *)ft_calloc(len + 1, sizeof(char));
-	if (!dup)
-		return (NULL);
-	ft_strlcpy(dup, s, len + 1);
-	return (dup);
-}
-
-static int	split_strings(char const *s, char c, \
-		char **str_array, int splits_am)
-{
-	int	i;
-	int	splits_i;
-
-	i = 0;
-	splits_i = 0;
-	while (splits_i < splits_am)
-	{
-		if (s[i] == c)
-		{
-			str_array[splits_i] = strldup(s, i);
-			if (!str_array[splits_i])
-				return (0);
-			splits_i++;
-			s += i + 1;
-			i = 0;
-		}
-		else
-			i++;
-	}
-	return (1);
-}
-
-static void	free_str_array(char **str_array)
-{
-	int	i;
-
-	i = 0;
-	while (str_array[i] != NULL)
-	{
-		free(str_array[i]);
-		i++;
-	}
-	free(str_array);
-}
+static void	ft_free(char **dest, int count);
+static int	ft_count_words(const char *str, char sep);
+static char	**ft_complete_words(char **dest, const char *s, char c, int *i);
 
 char	**ft_split(char const *s, char c)
 {
-	int		splits_am;
-	char	**str_array;
+	char	**dest;
+	int		i;
 
 	if (!s)
 		return (NULL);
-	splits_am = count_splits(s, c);
-	str_array = (char **)ft_calloc(splits_am + 1, sizeof(char *));
-	if (!str_array)
+	dest = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!dest)
 		return (NULL);
-	if (!split_strings(s, c, str_array, splits_am))
+	i = 0;
+	dest = ft_complete_words(dest, s, c, &i);
+	if (!dest)
+		return (NULL);
+	dest[i] = NULL;
+	return (dest);
+}
+
+static int	ft_count_words(const char *str, char sep)
+{
+	int	i;
+	int	words;
+
+	if (!str || !str[0])
+		return (0);
+	i = 0;
+	words = 0;
+	while (str[i])
 	{
-		free_str_array(str_array);
-		return (NULL);
+		while (str[i] == sep)
+			i++;
+		if (str[i] != '\0' && str[i] != sep)
+			words++;
+		while (str[i] != sep && str[i])
+			i++;
 	}
-	return (str_array);
+	return (words);
+}
+
+static char	**ft_complete_words(char **dest, const char *s, char c, int *i)
+{
+	size_t	len;
+
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		if (*s)
+		{
+			if (!ft_strchr(s, c))
+				len = ft_strlen(s);
+			else
+				len = ft_strchr(s, c) - s;
+			dest[*i] = ft_substr(s, 0, len);
+			if (!dest[*i])
+			{
+				ft_free(dest, *i);
+				return (NULL);
+			}
+			s += len;
+			(*i)++;
+		}
+	}
+	return (dest);
+}
+
+static void	ft_free(char **dest, int count)
+{
+	while (count > 0)
+		free(dest[--count]);
+	free(dest);
 }
